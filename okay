@@ -1,0 +1,174 @@
+from tkinter import*
+from tkinter import ttk 
+
+root = Tk()
+root.title("Voting System")
+root.geometry("1280x720")
+
+bg_color = '#90ee90'
+
+
+    
+def PDP():
+    def Proceed():
+        F5=Frame(root,bg='Light green',relief=RIDGE,bd=15)
+        F5.place(x=1,y=1,width=1280,height=720)
+        Proceed_Label = Label(roots,text='\t\t Candidate Biography \t\t',font=('calibre',20,'bold'),fg='Black',bg='White',relief=SUNKEN,bd=2)
+        Proceed.grid(row=0,column=0,padx=10,pady=80)
+        Proceed_Label.place(x=250,y=100)
+        
+    F4=Frame(root,bg='Light green',relief=RIDGE,bd=15)
+    F4.place(x=1,y=1,width=1280,height=720)
+    PDP_Label = Label(F4,text='\t\t Candidate Biography \t\t',font=('calibre',20,'bold'),fg='Black',bg='White',relief=SUNKEN,bd=2)
+    PDP_Label.place(x=250,y=100)
+    PDP_Label1 = Label(F4,text='''\b\b PDP Candidate name: Bola Ahmed Adekunle Tinubu \n Bola Ahmed Adekunle Tinubu(born 29 March 1952) is a Nigerian accountant and politician who has been national
+                                 leader of the All Progressives Congress since the party's formation in 2013. \n He previously served as the Governor
+                                 of Lagos State from 1999 to 2007 and Senator for Lagos West during the brief Third Republic. \n In January 2022, he
+                                announced his intention to run for the APC nomination for President of Nigeria in the 2023 presidential election..
+
+                                If this is your Favourite candidate,Kindly click on the proceed button to cast your Vote. ''',font=('calibre',10,'bold'),fg='Black',bg='white',relief=SUNKEN,bd=2)
+    PDP_Label1.grid(row=0,column=0,padx=10,pady=80)
+    PDP_Label1.place(x=250,y=140,width=725,height=400)
+    
+    PDP=Canvas(F4,bg='white',width=1200,height=50)
+    PDP.place(x=1, y=600)
+    Proceed = Button(F4,text='Proceed',font=('Arial',20),bg='Black',fg='white'),command=Proceed)
+    Proceed.grid(row=0,column=0,padx=10,pady=80)
+    Proceed.place(x=350, y=600)
+
+ 
+    
+    
+    
+
+    
+
+def tab():
+    def tab1():
+
+        ct1=Canvas(root, bg='light Green',width=1400,height=1000)
+        ct1.place(x=1,y=1)
+        F3=Frame(root,bg='light green',relief=RIDGE,bd=15)
+        F3.place(x=10,y=250,width=300,height=400)
+        Can_party1=Button(F3,text='PDP',font=('calibre',20,'bold'),fg='White',bg='black',relief=RIDGE,bd=7,command=PDP)
+        Can_party1.grid(row=0,column=0,padx=20,pady=10)
+        Can_party2=Button(F3,text='APC',font=('calibre',20,'bold'),fg='White',bg='black',relief=RIDGE,bd=7)
+        Can_party2.grid(row=1,column=0,padx=20,pady=10)
+        Can_party3=Button(F3,text='NNPC',font=('calibre',20,'bold'),fg='White',bg='black',relief=RIDGE,bd=7)
+        Can_party3.grid(row=2,column=0,padx=20,pady=10)
+        Can_party4=Button(F3,text='ANPP',font=('calibre',20,'bold'),fg='White',bg='black',relief=RIDGE,bd=7)
+        Can_party4.grid(row=3,column=0,padx=20,pady=10)
+        label1 = Label(root, text='Please Choose your Candidates Party Below',font=('calibre',20,'bold'),fg='White',bg='Light green',relief=SUNKEN,bd=7)
+        label1.place(x=250,y=100)
+        
+
+        
+    c1=Canvas(root,bg='Light green',width=1400,height=100)
+    c1.place(x=1, y=600)
+    
+    tab1_b=Button(root,text='Next',font=('Arial',20),command=tab1)
+    tab1_b.place(x=350, y=650)
+    tab2_b=Button(root,text='Cancel',font=('Arial',20))
+    tab2_b.place(x=650, y=650)
+    tab3_b=Button(root,text='Clear',font=('Arial',20))
+    tab3_b.place(x=950, y=650)
+tab()
+        
+    
+
+Tops = Label(root, text= 'Welcome to voting sysytem',bg=bg_color,fg='white',font=('calibre',25,'bold'),relief=GROOVE,bd=12)
+Tops.pack(fill=X)
+
+################Left frame################
+F1=Frame(root,bg=bg_color,relief=RIDGE,bd=15)
+F1.place(x=10,y=80,width=650  ,height=530)
+
+lbl_FN=Label(F1,text='First Name :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_FN.grid(row=0,column=0,padx=20,pady=10)
+txt_FN=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_FN.grid(row=0,column=1,pady=10,sticky='W')
+
+lbl_MN=Label(F1,text='Middle Name :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_MN.grid(row=1,column=0,padx=20,pady=10)
+txt_MN=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_MN.grid(row=1,column=1,pady=10,sticky='W')
+
+lbl_LN=Label(F1,text='Last Name :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_LN.grid(row=2,column=0,padx=20,pady=10)
+txt_LN=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_LN.grid(row=2,column=1,pady=10,sticky='W')
+
+lbl_NIN=Label(F1,text='Enter Your NIN :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_NIN.grid(row=3,column=0,padx=20,pady=10)
+txt_NIN=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_NIN.grid(row=3,column=1,pady=10,sticky='W')
+
+lbl_GN=Label(F1,text='Gender :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_GN.grid(row=4,column=0,padx=20,pady=10)
+txt_GN=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_GN.grid(row=4,column=1,pady=10,sticky='W')
+
+lbl_PU=Label(F1,text='Polling Unit Number :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_PU.grid(row=5,column=0,padx=20,pady=10)
+txt_PU=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_PU.grid(row=5,column=1,pady=10,sticky='W')
+
+lbl_CON=Label(F1,text='Email or Phone NO :',font=('calibre',20,'bold'),fg='White',bg=bg_color)
+lbl_CON.grid(row=6,column=0,padx=20,pady=10)
+txt_CON=Entry(F1,font=('calibre','15','bold'),relief=RIDGE,bd=5)
+txt_CON.grid(row=6,column=1,pady=10,sticky='W')
+
+
+
+
+#############right frame##############
+F2=Frame(root,bg='black',relief=RIDGE,bd=15)
+F2.place(x=665,y=80,width=610,height=530)
+
+#lbl_t=Label(F2,text='Coded By',font=('arial 15 bold'),fg='black',bg=bg_color,bd=7),relief=SUNKEN)
+#lbl_t.grid(fill=x)
+lbl_T=Label(F2,text='INEC Voting Portal***coded by****',font=('calibre',20,'bold'),fg='White',bg='black',relief=RIDGE,bd=7)
+lbl_T.grid(row=0,column=0,padx=20,pady=10)
+lbl_y=Label(F2,text='''
+
+
+                       **********     ****       ****   ***************
+                       **********     ****       ****   ***************
+                       **********     ****       ****   ***************
+                       ****           ***************   ******
+                       ****           ***************   ******
+                       ****           ***************   ******
+                       **********          *****        ***************
+                       **********          *****        ***************
+                       **********          *****        ***************
+                             ****          *****        ******
+                             ****          *****        ******
+                             ****          *****        ******
+                      ***********          *****        ***************
+                      ***********          *****        ***************
+                      ***********          *****        ***************
+                      
+            
+                                                                             \t\t\t''',fg='white',bg='black')
+lbl_y.grid(row=1)
+
+################Button#####################
+
+
+c1=Canvas(root,bg='light green',width=1400,height=100,command=tab1)
+c1.place(x=1, y=600)
+tab1_b=Button(root,text='TAB1',font=('Arial',20))
+tab1_b.place(x=350, y=650)
+tab2_b=Button(root,text='TAB2',font=('Arial',20))
+tab2_b.place(x=650, y=650)
+tab3_b=Button(root,text='TAB3',font=('Arial',20))
+tab3_b.place(x=950, y=650)
+
+
+
+
+    
+
+root.mainloop()
+
+
